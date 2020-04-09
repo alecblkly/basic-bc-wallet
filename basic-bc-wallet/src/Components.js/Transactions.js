@@ -31,13 +31,35 @@ const Transactions = () => {
 
    return (
       <div className="transactions-list">
-         <div className="outgoing">
+         <div className="transactions-data">
+            <h2>Incoming Transactions:</h2>
+            {recieved.map((info) => (
+               <div className="transaction-details">
+                  <div className="transaction-data">
+                     <p>Sender: {info.sender}</p>
+                  </div>
+                  <div className="transaction-data">
+                     <p>Recipient: {info.recipient}</p>
+                  </div>
+                  <div className="transaction-data">
+                     <p>Amount: {info.amount}</p>
+                  </div>
+               </div>
+            ))}
+         </div>
+         <div className="transactions-data">
             <h2>Outgoing Transactions:</h2>
             {sent.map((info) => (
                <div className="transaction-details">
-                  <div className="transaction-data">{info.sender}</div>
-                  <div className="transaction-data">{info.recipient}</div>
-                  <div className="transaction-data">{info.amount}</div>
+                  <div className="transaction-data">
+                     <p>Sender: {info.sender}</p>
+                  </div>
+                  <div className="transaction-data">
+                     <p>Recipient: {info.recipient}</p>
+                  </div>
+                  <div className="transaction-data">
+                     <p>Amount: {info.amount}</p>
+                  </div>
                </div>
             ))}
          </div>
