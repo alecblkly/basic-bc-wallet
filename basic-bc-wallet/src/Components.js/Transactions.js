@@ -32,7 +32,7 @@ const Transactions = () => {
    return (
       <div className="transactions-list">
          <div className="transactions-data">
-            <h2>Incoming Transactions:</h2>
+            <h2>Incoming Transactions</h2>
             {recieved.map((info) => (
                <div className="transaction-details">
                   <div className="transaction-data">
@@ -48,7 +48,7 @@ const Transactions = () => {
             ))}
          </div>
          <div className="transactions-data">
-            <h2>Outgoing Transactions:</h2>
+            <h2>Outgoing Transactions</h2>
             {sent.map((info) => (
                <div className="transaction-details">
                   <div className="transaction-data">
